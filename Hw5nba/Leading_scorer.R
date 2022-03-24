@@ -1,8 +1,9 @@
 #' Finding out highest scoring player
 #'
 #' This function finds out the highest scoring player given the user input year.
-#' 
+#'
 #' @param The Year in which the user wants to find out
+#' @keywords HW5nba
 #' @return The record of the highest scoring player in the given year
 #' @export
 
