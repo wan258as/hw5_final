@@ -10,7 +10,8 @@
 #' @export
 
 oldest_player = function(year) {
-  chosen_year = filter(df, Year == year)
+  Seasons_Stats_NBA = dplyr::as_tibble(Seasons_Stats_NBA)
+  chosen_year = filter(Seasons_Stats_NBA, Year == year)
   chosen_year_oldest = filter(chosen_year, Age == max(chosen_year$Age))
   return(top_n(chosen_year_oldest,1))
 }

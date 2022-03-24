@@ -8,6 +8,7 @@
 #' @export
 
 leading_scorer = function(year) {
-  chosen_year = dplyr::filter(df, Year == year)
+  Seasons_Stats_NBA = dplyr::as_tibble(Seasons_Stats_NBA)
+  chosen_year = dplyr::filter(Seasons_Stats_NBA)
   return(dplyr::filter(chosen_year, PTS == max(chosen_year$PTS)))
 }
